@@ -48,38 +48,35 @@ const SignUpForm = () => {
     }
     
   return (
-    <div>
+      <div className='container'>
         <form onSubmit={handleSubmit}>
             <div>
-                <label>Name :</label>
-                <input type="text" value={username} onChange={(e)=> setUsername(e.target.value)} />
+                <input type="text" placeholder="Name" value={username} onChange={(e)=> setUsername(e.target.value)} />
                 {errors.username && <span>{errors.username}</span>}
                 
             </div>
             <div>
-                <label>Email :</label>
-                <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} />
+                <input type="email" placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)} />
                 {errors.email && <span>{errors.email}</span>}
 
             </div>
             
             <div>
-                <label>Password :</label>
-                <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} />
+                <input type="password" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)} />
                 {errors.password && <span>{errors.password}</span>}
                 
             </div>
             <div>
-                <label>Confirm Password :</label>
-                <input type="password" value={confirmpassword} onChange={(e)=> setConfirmpassword(e.target.value)} />
+                <input type="password" placeholder="Confirm Password" value={confirmpassword} onChange={(e)=> setConfirmpassword(e.target.value)} />
                 {errors.confirmpassword && <span>{errors.confirmpassword}</span>}
                 
             </div>
-            <button type="submit">Sign Up</button>
+
             {success && <p>{success}</p>}
+            <button type="submit" className='submit-btn'>Sign Up</button>
         </form>
     </div>
   )
 }
 
-export default SignUpForm
+export default SignUpForm;
