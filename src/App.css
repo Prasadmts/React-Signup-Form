@@ -1,51 +1,89 @@
-* {
-    background-color: black;
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 400;
-}
-h1 {
-    margin-top: 10%;
-    text-align: center;
-}
-form {
+
+.login-main-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-sub {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8%;
+    gap: 50px;
+    width: 50%;
+    background: white;
+    
+  }
+  .login-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
-    margin-top: 5%;
-    margin-left: 30%;
-}
-
-input {
-    background-color: black;
-    color: white;
-    border:none ;
-    border-bottom: 1px solid white;
-    outline: none;
-    width: 50%;
-    padding: 1%;
-    font-size: large;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    width: 70em;
-}
-
-.submit-btn{
-    width: 200px;
-    padding: 1% 5%;
+    gap: 21px;
+    margin: 0px 20%;
+    padding: 5%;
+    box-shadow: 0px 0px 9px;
+  }
+  .email-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .password-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .button-sign {
+    width: 100%;
+    background: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
     border: none;
-    font-size: large;
-    background-color: white;
-    color: black;
-}
-form > p {
-    color: green;
-}
+    padding: 2% 1px;
+    color: white;
+  }
 
-form > div > span {
+  .line-div {
+    background: #00e7ff;
+    padding: 2px 1px;
+    width: 91%;
+    position: fixed;
+    z-index: -11111;
+    transform: rotateZ(18deg)translateY(108px);
+  }
+  .sigup-link {
+    margin: 0px auto;
+  }
+  .login-input {
+   
+    border-radius: 4px;
+    padding: 2.2% 1%;
+    border: 1px solid #0000002e;
+    outline: none;
+  }
+  .forgot-text {
+    color: #625BF7;
+    text-align: center;
+  }
+  .sigup-link-text{
+    color: #625BF7;
+    text-align: center;
+  }
+  .error-text{
     color: red;
-}
+  }
+  .success-text{
+    color:green;
+  }
+  @media screen and (max-width: 562px) {
+    .login-sub {
+        width: 95%;
+      }
+      .login-box {
+        margin: 0px 7%;
+      }
+      .line-div {
+        background: #00e7ff;
+        padding: 2px 1px;
+        width: 129%;
+        position: fixed;
+        z-index: -11111;
+        transform: rotateZ(31deg)translateY(0px);
+      }
+  }

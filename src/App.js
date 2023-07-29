@@ -1,14 +1,20 @@
-import './App.css';
-import './index.css';
-import SignUpForm from './SignUpForm';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Use BrowserRouter instead of HashRouter
+import Login from './Components/Login';
+import Profile from './Components/Profile';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Sign Up Form</h1>
-      <SignUpForm/>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
+
